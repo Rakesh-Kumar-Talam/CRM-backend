@@ -34,9 +34,9 @@ export const env = {
 	googleCallbackUrl: process.env.GOOGLE_CALLBACK_URL || local.GOOGLE_CALLBACK_URL || 'https://cr-m-back.onrender.com/api/auth/google/callback',
 	
 	// Frontend URLs
-	frontendUrl: process.env.FRONTEND_URL || local.FRONTEND_URL || 'https://crm-front-drks.onrender.com',
-	frontendDashboardUrl: process.env.FRONTEND_DASHBOARD_URL || local.FRONTEND_DASHBOARD_URL || 'https://crm-front-drks.onrender.com/dashboard',
-	frontendAuthCallbackUrl: process.env.FRONTEND_AUTH_CALLBACK_URL || local.FRONTEND_AUTH_CALLBACK_URL || 'https://crm-front-drks.onrender.com/auth/callback',
+	frontendUrl: process.env.FRONTEND_URL || local.FRONTEND_URL || 'https://crm-frontend-xqgx.onrender.com',
+	frontendDashboardUrl: process.env.FRONTEND_DASHBOARD_URL || local.FRONTEND_DASHBOARD_URL || 'https://crm-frontend-xqgx.onrender.com/dashboard',
+	frontendAuthCallbackUrl: process.env.FRONTEND_AUTH_CALLBACK_URL || local.FRONTEND_AUTH_CALLBACK_URL || 'https://crm-frontend-xqgx.onrender.com/auth/callback',
 	
 	// Redis configuration
 	redisUrl: process.env.REDIS_URL || local.REDIS_URL || 'redis://127.0.0.1:6379',
