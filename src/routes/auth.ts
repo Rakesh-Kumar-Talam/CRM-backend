@@ -338,8 +338,9 @@ if (env.googleClientId && env.googleClientSecret) {
 				}));
 				res.redirect(frontendUrl.toString());
 			} else {
-				// API response - redirect to a simple success page
-				res.redirect(`http://localhost:3000/dashboard?token=${token}&success=true&gmailVerified=${user.gmailVerified}&user=${encodeURIComponent(JSON.stringify({
+				// API response - redirect to frontend dashboard
+				const frontendUrl = env.frontendDashboardUrl || 'https://crm-front-drks.onrender.com/dashboard';
+				res.redirect(`${frontendUrl}?token=${token}&success=true&gmailVerified=${user.gmailVerified}&user=${encodeURIComponent(JSON.stringify({
 					id: consistentUserId, // Use consistent ID
 					email: user.email,
 					name: user.name,
@@ -358,7 +359,7 @@ if (env.googleClientId && env.googleClientSecret) {
 		console.log('OAuth error handler called with:', { error, redirectUrl });
 		
 		// Default redirect to dashboard if no redirect URL provided
-		const defaultRedirectUrl = 'http://localhost:3000/dashboard';
+		const defaultRedirectUrl = env.frontendDashboardUrl || 'https://crm-front-drks.onrender.com/dashboard';
 		const finalRedirectUrl = redirectUrl || defaultRedirectUrl;
 		
 		// Determine error message based on error type
