@@ -9,7 +9,7 @@ import './workers/orders.worker';
 import cors from "cors";
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://crm-front-drks.onrender.com",
+  origin: process.env.FRONTEND_URL || "https://crm-frontend-xqgx.onrender.com",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
